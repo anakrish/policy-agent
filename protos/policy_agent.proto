@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package policy_agent;
+
+message AddPolicyRequest {
+    string Id = 1;
+    string Language = 3;
+    string Policy = 2;
+}
+
+message Response {
+    bool Ok = 1;
+    string Error = 2;
+}
+
+message ValidateRequest {
+    string PolicyId = 1;
+    string Data = 2;
+}
+
+service PolicyAgentService {
+    rpc AddPolicy(AddPolicyRequest) returns (Response) {};
+    rpc Validate(ValidateRequest) returns (Response) {};    
+}

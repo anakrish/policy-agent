@@ -1,0 +1,15 @@
+# Copyright (c) Policy-Agent Authors.
+# Licensed under the Apache 2.0 license.
+[package]
+name = "policy-agent-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.68"
+
+[build-dependencies]
+anyhow = "1.0.68"
+tonic-build = "0.8.4"
